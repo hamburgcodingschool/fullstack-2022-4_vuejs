@@ -1,0 +1,9 @@
+<template>
+    <select>
+        <option>Bananas</option>
+        <option>Bananas</option>
+        <option>Bananas</option>
+        <option>Bananas</option>
+        <option>Bananas</option>
+    </select>
+</template>
