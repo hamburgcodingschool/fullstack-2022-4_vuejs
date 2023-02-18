@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="valueBox">0</div>
+    <button id="buttonOneLess">One less!!!!</button>
+    <button id="buttonOneMore">One more!!!!</button>
+
+    <br>
+    <br>
+    <input type="text" placeholder="some value will go here" value="Hello" id="text1">
+
+    <script>
+        let counter = 0;
+
+        const valueBox = document.querySelector("#valueBox");
+        const buttonOneMore = document.querySelector("#buttonOneMore");
+        const buttonOneLess = document.querySelector("#buttonOneLess");
+        
+        buttonOneMore.addEventListener("click", function(event) {
+            console.log(event);
+            counter ++;
+            valueBox.innerText = counter;
+        });
+
+        buttonOneLess.addEventListener("click", function(event) {
+            counter --;
+            valueBox.innerText = counter;
+        });
+
+
+        
+
+    </script>
+</body>
+</html>
