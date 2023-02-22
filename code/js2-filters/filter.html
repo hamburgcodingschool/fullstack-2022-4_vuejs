@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const originals = [ 3, 6, 12, 43, -10, 45, 20, 15, 2, 0, -5 ];
+        
+        const filtered = filterNumbersInRange(originals, -5, 40);
+        console.log(filtered);
+        
+
+
+        function filterNumbersBetween0And10(originalNumbers) {
+            const filteredNumbers = [];
+            for (let i = 0; i < originalNumbers.length; i++) {
+                if (originalNumbers[i] >= 0 && originalNumbers[i] < 10) {
+                    filteredNumbers.push(originalNumbers[i]);
+                }
+            }
+            return filteredNumbers;
+        }
+
+        function filterNumbersInRange(originalNumbers, min, max) {
+            const filteredNumbers = [];
+            for (let i = 0; i < originalNumbers.length; i++) {
+                if (originalNumbers[i] >= min && originalNumbers[i] < max) {
+                    filteredNumbers.push(originalNumbers[i]);
+                }
+            }
+            return filteredNumbers;
+        }
+    </script>
+</body>
+</html>
