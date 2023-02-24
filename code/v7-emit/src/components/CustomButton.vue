@@ -1,5 +1,5 @@
 <template>
-    <button @click="clickHandler">{{ text }}</button>
+    <button @click="clickHandler" :style="{ backgroundColor: this.color }">{{ text }}</button>
 </template>
 
 <script>
@@ -7,7 +7,8 @@
 
 export default {
     props: {
-        text: String
+        text: String,
+        color: String
     },
     emits: ["myClick"],
     methods: {
