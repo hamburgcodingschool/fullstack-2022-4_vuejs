@@ -20,6 +20,12 @@ function query(sql, params) {
     });
 }
 
+async function getTop3() {
+    const sql = `SELECT * FROM recipes ORDER BY id ASC LIMIT 3`;
+    const results = await query(sql);
+    return results;
+}
+
 async function getRecipes() {
     const sql = `SELECT * FROM recipes`;
     const results = await query(sql);
@@ -47,6 +53,7 @@ async function addRecipe(recipeBody) {
 }
 
 module.exports = {
+    getTop3,
     getRecipes,
     getRecipeByID,
     addRecipe

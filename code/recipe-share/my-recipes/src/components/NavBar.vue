@@ -33,7 +33,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary"> Add new Recipe </a>
+            <RouterLink to="/addrecipe" class="button is-primary"> Add Recipe </RouterLink>
           </div>
         </div>
       </div>

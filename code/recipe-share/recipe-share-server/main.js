@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const port = 3000;
@@ -6,6 +7,12 @@ const port = 3000;
 const connection = require("./database/connection");
 
 app.use(express.json());
+app.use(cors());
+
+app.get("/top3recipes", async function(req, res) {
+    const results = await connection.getTop3();
+    res.json(results);
+});
 
 app.get("/recipes", async function(req, res) {
     const results = await connection.getRecipes();
@@ -20,7 +27,10 @@ app.get("/recipes/:id", async function(req, res) {
 });
 
 app.post("/recipes", async function(req, res) {
-    const result = await connection.addRecipe(req.body);
+    // TODO: sanitize data properly
+    const recipeBody = req.body;
+
+    const result = await connection.addRecipe(recipeBody);
     res.json(result);
 });
 
